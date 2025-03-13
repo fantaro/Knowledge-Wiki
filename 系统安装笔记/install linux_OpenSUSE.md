@@ -1,5 +1,9 @@
 # OpenSUSE 安装笔记
 
+### 系统概要
+- OS：OpenSUSE Tumbleweed
+- 桌面环境：KDE
+
 ### 系统更新
 
 ```bash
