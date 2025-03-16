@@ -7,7 +7,7 @@
 ### 系统更新
 
 ```bash
-sudo zypper dup　※推荐
+sudo zypper dup
 # 或者
 sudo zypper refresh
 sudo zypper update
@@ -22,10 +22,9 @@ git clone https://github.com/fantaro/dotfiles
 
 ### 安装 Edge 浏览器
 
-*请使用现有浏览器下载 Edge 浏览器*
+*使用现有浏览器下载 Edge 浏览器*
 
-### 安装 brave-browser
-
+### 安装 Brave 浏览器
 ```bash
 sudo zypper install curl
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
@@ -39,7 +38,7 @@ sudo zypper install brave-browser
 
 ### 设置系统语言（YaST）
 
-*请使用 YaST 设置系统语言*
+*使用 YaST 设置系统语言*
 
 ### 安装中日文输入法
 
@@ -55,26 +54,24 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak config --set languages "ja;zh"
 ```
 
-### 重启系统
-
-*重启系统以确保配置生效*
+### 重启系统以确保配置生效
 
 ### 安装 kwin 插件：Kröhnkite
 
-请参阅：[Kröhnkite 插件说明](https://github.com/anametologin/krohnkite#readme)
+[Kröhnkite 插件说明](https://github.com/anametologin/krohnkite#readme)
 
-### 安装和配置程序 (Packages)
+### 安装・移除和配置软件 (Packages)
 
-首先移除 Firefox：
+移除 Firefox：
 
 ```bash
 sudo zypper remove firefox
 ```
 
-然后安装常用软件：
+安装常用软件：
 
 ```bash
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat diff-so-fancy lsd
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat diff-so-fancy lsd cowsay
 ```
 
 ### Rust
@@ -102,23 +99,6 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 
 sudo zypper refresh
 sudo zypper install code
-```
-
-### 安装常用软件（Flatpak）
-
-```bash
-flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader io.anytype.anytype org.localsend.localsend_app com.calibre_ebook.calibre com.jgraph.drawio.desktop com.xnview.XnViewMP org.kde.krita net.agalwood.Motrix flathub org.kde.skanpage
-
-flatpak install -y flathub md.obsidian.Obsidian
-flatpak install -y flathub org.musescore.MuseScore
-flatpak install -y flathub net.ankiweb.Anki
-flatpak install -y flathub us.zoom.Zoom
-```
-
-### 如果 flatpak 安装后出现乱码
-
-```bash
-flatpak run --command=fc-cache {AppName} -f -v
 ```
 
 ### 配置 tmux
@@ -151,7 +131,6 @@ mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 cd ~
 cat .bashrc
 echo >> .bashrc
-echo "# alias" >> .bashrc
 echo "alias ls='lsd'" >> .bashrc
 echo "alias ll='lsd -l'" >> .bashrc
 echo "alias la='lsd -a'" >> .bashrc
@@ -168,6 +147,7 @@ sudo zypper in neovim lazygit neovide
 cd ~
 cat .bashrc
 echo >> .bashrc
+echo 'alias vi=vim' >> .bashrc
 echo 'alias vim=nvim' >> .bashrc
 echo 'export EDITOR=/usr/bin/nvim' >> .bashrc
 echo 'export SUDO_EDITOR=/usr/bin/nvim' >> .bashrc
@@ -222,6 +202,23 @@ cat .bashrc
 mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
+### 安装常用软件（Flatpak）
+
+```bash
+flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader io.anytype.anytype org.localsend.localsend_app com.calibre_ebook.calibre com.jgraph.drawio.desktop com.xnview.XnViewMP org.kde.krita net.agalwood.Motrix flathub org.kde.skanpage
+
+flatpak install -y flathub md.obsidian.Obsidian
+flatpak install -y flathub org.musescore.MuseScore
+flatpak install -y flathub net.ankiweb.Anki
+flatpak install -y flathub us.zoom.Zoom
+```
+
+### 如果 flatpak 安装后出现乱码
+
+```bash
+flatpak run --command=fc-cache {AppName} -f -v
+```
+
 ### 安装字体
 
 ```bash
@@ -260,6 +257,7 @@ mv ~/Documents/dotfiles/.vimrc ~/
 ```bash
 cat .bashrc
 echo >> .bashrc
+echo 'alias vi=vim' >> .bashrc
 echo 'export EDITOR=/usr/bin/vim' >> .bashrc
 echo 'export SUDO_EDITOR=/usr/bin/vim' >> .bashrc
 cat .bashrc
@@ -283,7 +281,6 @@ mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
 cd ~
 cat .bashrc
 echo >> .bashrc
-echo "# alias" >> .bashrc
 echo "alias ls='eza --icons'" >> .bashrc
 echo "alias ll='eza -l --icons'" >> .bashrc
 echo "alias la='eza -a --icons'" >> .bashrc
