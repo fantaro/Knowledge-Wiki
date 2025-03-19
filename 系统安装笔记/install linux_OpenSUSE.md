@@ -62,10 +62,10 @@ flatpak config --set languages "ja;zh"
 
 ### 安装・移除和配置软件 (Packages)
 
-移除 Firefox：
+移除不需要的软件：
 
 ```bash
-sudo zypper remove firefox
+sudo zypper remove firefox ibus
 ```
 
 安装常用软件：
