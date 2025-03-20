@@ -153,20 +153,25 @@ mv ~/Documents/dotfiles/dotconfig/btop ~/.config/
 mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 ```
 
+更新 shell 配置：
+
+```shell
+cd ~
+cat .zshrc
+echo >> .zshrc
+echo "alias ls='lsd'" >> .zshrc
+echo "alias ll='lsd -l'" >> .zshrc
+echo "alias la='lsd -a'" >> .zshrc
+echo "alias lla='lsd -la'" >> .zshrc
+echo "alias lt='lsd --tree'" >> .zshrc
+cat .zshrc
+```
+
 
 ### 配置 NeoVim (LazyVim)
 
 ```shell
 sudo zypper in neovim lazygit neovide
-
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo 'alias vi=vim' >> .zshrc
-echo 'alias vim=nvim' >> .zshrc
-echo 'export EDITOR=/usr/bin/nvim' >> .zshrc
-echo 'export SUDO_EDITOR=/usr/bin/nvim' >> .zshrc
-cat .zshrc
 
 mv ~/.config/nvim{,.bak}
 mv ~/.local/share/nvim{,.bak}
@@ -181,6 +186,19 @@ mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua
 mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
 
 nvim
+```
+
+更新 shell 配置：
+
+```shell
+cd ~
+cat .zshrc
+echo >> .zshrc
+echo 'alias vi=vim' >> .zshrc
+echo 'alias vim=nvim' >> .zshrc
+echo 'export EDITOR=/usr/bin/nvim' >> .zshrc
+echo 'export SUDO_EDITOR=/usr/bin/nvim' >> .zshrc
+cat .zshrc
 ```
 
 ### 配置 WezTerm
@@ -205,6 +223,12 @@ ya pack -u
 ### 配置 starship
 
 ```shell
+mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
+```
+
+更新 shell 配置：
+
+```shell
 cd ~
 cat .bashrc
 echo >> .bashrc
@@ -212,8 +236,6 @@ echo 'if command -v starship &> /dev/null; then' >> .bashrc
 echo '  eval "$(starship init bash)"' >> .bashrc
 echo 'fi' >> .bashrc
 cat .bashrc
-
-mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
 ### 安装常用软件（Flatpak）
