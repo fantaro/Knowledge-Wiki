@@ -113,7 +113,7 @@ rustup default stable
 ### Yazi
 
 ```shell
-sudo zypper install ueberzugpp ffmpeg p7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler
+sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler xclip
 pip3 install rich-cli
 cargo install --locked yazi-fm yazi-cli
 ```
