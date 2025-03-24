@@ -260,16 +260,16 @@ flatpak run --command=fc-cache {AppName} -f -v
 ```shell
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip \
 && wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FantasqueSansMono.zip \
-&& wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNL-NF-CN-unhinted.zip \
+&& wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraMono.zip \
 && wget -P ~/.local/share/fonts https://github.com/yuru7/udev-gothic/releases/download/v2.1.0/UDEVGothic_NF_v2.1.0.zip \
 && cd ~/.local/share/fonts \
 && unzip Hack.zip \
 && unzip FantasqueSansMono.zip \
-&& unzip MapleMonoNL-NF-CN-unhinted.zip \
+&& unzip FiraMono.zip \
 && unzip UDEVGothic_NF_v2.1.0.zip \
 && rm Hack.zip \
 && rm FantasqueSansMono.zip \
-&& rm MapleMonoNL-NF-CN-unhinted.zip \
+&& rm FiraMono.zip \
 && rm UDEVGothic_NF_v2.1.0.zip \
 && fc-cache -fv
 ```
