@@ -29,11 +29,9 @@ sudo zypper install zsh
 zsh --version
 chsh -s $(which zsh)
 ```
-登出再登入
-
-进入终端并对zsh做初期设置
-
-确认zsh版本
+- 登出再登入
+- 进入终端并对zsh做初期设置
+- 确认zsh版本
 
 ```shell
 echo $SHELL
@@ -49,7 +47,7 @@ mv ~/Documents/dotfiles/.zshrc ~/
 
 ### 安装 Edge 浏览器
 
-*使用现有浏览器下载 Edge 浏览器*
+- 使用现有浏览器下载 Edge 浏览器
 
 ### 安装 Brave 浏览器
 ```shell
@@ -59,13 +57,15 @@ sudo zypper addrepo https://brave-browser-rpm-release.s3.brave.com/brave-browser
 sudo zypper install brave-browser
 ```
 
+- 进入 brave://flags 开启 Wayland 模式
+
 ### 安装 Dropbox 并启动
 
 [Dropbox官网](https://www.dropbox.com)
 
-### 设置系统语言（YaST）
+### 设置系统语言
 
-*使用 YaST 设置系统语言*
+- 使用 YaST 设置系统语言
 
 ### 安装中日文输入法
 
@@ -89,13 +89,13 @@ flatpak config --set languages "ja;zh"
 
 ### 安装・移除和配置软件 (Packages)
 
-移除不需要的软件：
+- 移除不需要的软件：
 
 ```shell
 sudo zypper remove firefox ibus
 ```
 
-安装常用软件：
+- 安装常用软件：
 
 ```shell
 sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat diff-so-fancy lsd cowsay
@@ -153,7 +153,7 @@ mv ~/Documents/dotfiles/dotconfig/btop ~/.config/
 mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 ```
 
-更新 shell 配置：
+- 更新 shell 配置
 
 ```shell
 cd ~
@@ -188,7 +188,7 @@ mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
 nvim
 ```
 
-更新 shell 配置：
+- 更新 shell 配置
 
 ```shell
 cd ~
@@ -226,7 +226,7 @@ ya pack -u
 mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
-更新 shell 配置：
+- 更新 shell 配置
 
 ```shell
 cd ~
@@ -259,17 +259,17 @@ flatpak run --command=fc-cache {AppName} -f -v
 
 ```shell
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip \
-&& wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/SourceCodePro.zip \
 && wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FantasqueSansMono.zip \
+&& wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNL-NF-CN-unhinted.zip \
 && wget -P ~/.local/share/fonts https://github.com/yuru7/udev-gothic/releases/download/v2.1.0/UDEVGothic_NF_v2.1.0.zip \
 && cd ~/.local/share/fonts \
 && unzip Hack.zip \
-&& unzip SourceCodePro.zip \
 && unzip FantasqueSansMono.zip \
+&& unzip MapleMonoNL-NF-CN-unhinted.zip \
 && unzip UDEVGothic_NF_v2.1.0.zip \
 && rm Hack.zip \
-&& rm SourceCodePro.zip \
 && rm FantasqueSansMono.zip \
+&& rm MapleMonoNL-NF-CN-unhinted.zip \
 && rm UDEVGothic_NF_v2.1.0.zip \
 && fc-cache -fv
 ```
@@ -288,7 +288,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 mv ~/Documents/dotfiles/.vimrc ~/
 ```
 
-更新 shell 配置：
+- 更新 shell 配置
 
 ```shell
 cat .zshrc
@@ -299,7 +299,7 @@ echo 'export SUDO_EDITOR=/usr/bin/vim' >> .zshrc
 cat .zshrc
 ```
 
-启动 Vim 后运行命令安装插件：
+- 启动 Vim 后运行命令安装插件
 
 ```vim
 :PlugInstall
@@ -311,7 +311,7 @@ cat .zshrc
 mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
 ```
 
-更新 shell 配置：
+- 更新 shell 配置
 
 ```shell
 cd ~
@@ -373,7 +373,7 @@ sudo zypper install python3 python3-pip
 pip3 install --upgrade pip
 ```
 
-如果出现 `error: externally-managed-environment` 错误，可执行以下步骤：
+- 如果出现 `error: externally-managed-environment` 错误，执行以下步骤
 
 ```shell
 mkdir ~/.config/pip
@@ -387,7 +387,7 @@ vi ~/.config/pip/pip.conf
 break-system-packages = true
 ```
 
-安装需要的库：
+- 安装需要的库：
 
 ```shell
 pip3 install pandas
