@@ -29,6 +29,7 @@ sudo zypper install zsh
 zsh --version
 chsh -s $(which zsh)
 ```
+
 - 登出再登入
 - 进入终端并对zsh做初期设置
 - 确认zsh版本
@@ -87,7 +88,7 @@ flatpak config --set languages "ja;zh"
 
 [Kröhnkite 插件说明](https://github.com/anametologin/krohnkite#readme)
 
-### 安装・移除和配置软件 (Packages)
+### 安装／移除软件 (Packages)
 
 - 移除不需要的软件：
 
@@ -101,7 +102,7 @@ sudo zypper remove firefox ibus
 sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat diff-so-fancy lsd cowsay
 ```
 
-### Rust
+### 安装 Rust
 
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -110,7 +111,7 @@ rustup update stable
 rustup default stable
 ```
 
-### Yazi
+### 安装 Yazi
 
 ```shell
 sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler xclip
@@ -118,7 +119,7 @@ pip3 install rich-cli
 cargo install --locked yazi-fm yazi-cli
 ```
 
-### VSCode
+### 安装 VSCode
 
 ```shell
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -166,7 +167,6 @@ echo "alias lla='lsd -la'" >> .zshrc
 echo "alias lt='lsd --tree'" >> .zshrc
 cat .zshrc
 ```
-
 
 ### 配置 NeoVim (LazyVim)
 
@@ -258,16 +258,16 @@ flatpak run --command=fc-cache {AppName} -f -v
 ### 安装字体
 
 ```shell
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip \
+wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNL-NF-CN-unhinted.zip \
 && wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FantasqueSansMono.zip \
 && wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraMono.zip \
 && wget -P ~/.local/share/fonts https://github.com/yuru7/udev-gothic/releases/download/v2.1.0/UDEVGothic_NF_v2.1.0.zip \
 && cd ~/.local/share/fonts \
-&& unzip Hack.zip \
+&& unzip MapleMonoNL-NF-CN-unhinted.zip \
 && unzip FantasqueSansMono.zip \
 && unzip FiraMono.zip \
 && unzip UDEVGothic_NF_v2.1.0.zip \
-&& rm Hack.zip \
+&& rm MapleMonoNL-NF-CN-unhinted.zip \
 && rm FantasqueSansMono.zip \
 && rm FiraMono.zip \
 && rm UDEVGothic_NF_v2.1.0.zip \
@@ -411,7 +411,7 @@ conda upgrade --all
 conda clean --packages
 ```
 
-### 安装 VMware Workstation Pro
+### 安装 VMware Workstation
 
 ```shell
 sudo bash ./VMware-Workstation-Full-xxxx.x86_64.bundle
@@ -419,9 +419,7 @@ sudo bash ./VMware-Workstation-Full-xxxx.x86_64.bundle
 sudo zypper install kernel-default-devel
 ```
 
-### 使用终端卸载 Workstation
-
-对于 Red Hat/CentOS/openSUSE：
+### 手动卸载 VMware Workstation
 
 1. 列出已安装的 vmware 包：
    ```shell
@@ -467,7 +465,7 @@ sudo zypper install kernel-default-devel
    sudo rm -rf /usr/share/applications/vmware*
    ```
 
-#### (vmware-host-modules)
+#### 编译 vmware-host-modules
 
 ```shell
 git clone https://github.com/mkubecek/vmware-host-modules
