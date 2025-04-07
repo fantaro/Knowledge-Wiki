@@ -100,7 +100,7 @@ sudo zypper remove firefox ibus
 - 安装常用软件：
 
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat diff-so-fancy lsd cowsay
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat lsd cowsay
 ```
 
 ### 安装 Rust
@@ -115,7 +115,7 @@ rustup default stable
 ### 安装 Yazi
 
 ```shell
-sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler xclip
+sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler xclip ouch
 pip3 install rich-cli
 cargo install --locked yazi-fm yazi-cli
 ```
