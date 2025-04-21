@@ -116,7 +116,6 @@ rustup default stable
 
 ```shell
 sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler xclip ouch
-pip3 install rich-cli
 cargo install --locked yazi-fm yazi-cli
 ```
 
