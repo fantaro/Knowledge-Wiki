@@ -2,8 +2,9 @@
 
 ### 系统概要
 - OS：OpenSUSE Tumbleweed
-- 桌面环境：KDE
-- Shell环境：zsh
+- DE：KDE
+- WM：KWIN
+- Shell：zsh
 
 ### 系统更新
 
