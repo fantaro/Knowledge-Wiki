@@ -55,9 +55,7 @@ mv ~/Documents/dotfiles/.zshrc ~/
 ### 安装 Brave 浏览器
 ```shell
 sudo zypper install curl
-sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-sudo zypper addrepo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-sudo zypper install brave-browser
+curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
 - 进入 brave://flags 开启 Wayland 模式
