@@ -17,13 +17,17 @@ sudo zypper refresh
 sudo zypper update
 ```
 
+### 安装必要软件
+```shell
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git bat lsd curl wget
+```
+
 ### 安装 Edge 浏览器
 
 - 使用现有浏览器下载 Edge 浏览器
 
 ### 安装 Brave 浏览器
 ```shell
-sudo zypper install curl
 curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
@@ -72,7 +76,7 @@ sudo zypper remove firefox ibus
 - 安装常用软件：
 
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat lsd cowsay
+sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 cowsay
 ```
 
 ### 下载我的 dotfiles
@@ -224,12 +228,6 @@ mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
 ya pack -u
 ```
 
-### 配置 starship
-
-```shell
-mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
-```
-
 - 更新 shell 配置
 
 ```shell
@@ -245,8 +243,9 @@ cat .bashrc
 ### 安装常用软件（Flatpak）
 
 ```shell
-flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader io.anytype.anytype org.localsend.localsend_app com.calibre_ebook.calibre com.jgraph.drawio.desktop com.xnview.XnViewMP org.kde.krita net.agalwood.Motrix flathub org.kde.skanpage
+sudo flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader io.anytype.anytype org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita net.agalwood.Motrix
 
+flatpak install -y flathub com.xnview.XnViewMP
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub org.musescore.MuseScore
 flatpak install -y flathub net.ankiweb.Anki
@@ -312,6 +311,12 @@ cat .zshrc
 
 ```vim
 :PlugInstall
+```
+
+### 配置 starship
+
+```shell
+mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
 ### 配置 eza
