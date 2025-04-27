@@ -33,6 +33,10 @@ curl -fsS https://dl.brave.com/install.sh | sh
 
 [Dropbox官网](https://www.dropbox.com)
 
+```shell
+sudo zypper install dropbox dolphin-plugins
+```
+
 ### 设置系统语言
 
 - 使用 YaST 设置系统语言
