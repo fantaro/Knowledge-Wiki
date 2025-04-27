@@ -17,37 +17,6 @@ sudo zypper refresh
 sudo zypper update
 ```
 
-### 下载我的 dotfiles
-
-```shell
-cd ~/Documents
-git clone https://github.com/fantaro/dotfiles
-```
-
-### 安装 zsh
-```shell
-sudo zypper install zsh
-zsh --version
-chsh -s $(which zsh)
-```
-
-- 登出再登入
-- 进入终端并对zsh做初期设置
-- 确认zsh版本
-
-```shell
-echo $SHELL
-$SHELL --version
-```
-
-### 安装 Oh My Zsh
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-mv ~/Documents/dotfiles/.zshrc ~/
-```
-
 ### 安装 Edge 浏览器
 
 - 使用现有浏览器下载 Edge 浏览器
@@ -102,10 +71,42 @@ sudo zypper remove firefox ibus
 sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 bat lsd cowsay
 ```
 
+### 下载我的 dotfiles
+
+```shell
+cd ~/Documents
+git clone https://github.com/fantaro/dotfiles
+```
+
+### 安装 zsh
+```shell
+sudo zypper install zsh
+zsh --version
+chsh -s $(which zsh)
+```
+
+- 登出再登入
+- 进入终端并对zsh做初期设置
+- 确认zsh版本
+
+```shell
+echo $SHELL
+$SHELL --version
+```
+
+### 安装 Oh My Zsh
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+mv ~/Documents/dotfiles/.zshrc ~/
+```
+
 ### 安装 Rust
 
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo zypper install rustup
 cargo install cargo-update
 rustup update stable
 rustup default stable
@@ -114,7 +115,7 @@ rustup default stable
 ### 安装 Yazi
 
 ```shell
-sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide imagemagick chafa fd poppler xclip ouch
+sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick chafa fd poppler-tools xclip ouch
 cargo install --locked yazi-fm yazi-cli
 ```
 
@@ -257,16 +258,13 @@ flatpak run --command=fc-cache {AppName} -f -v
 ### 安装字体
 
 ```shell
-wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNL-NF-CN-unhinted.zip \
-&& wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMono-NF-CN-unhinted.zip \
-&& wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FantasqueSansMono.zip \
-&& wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraMono.zip \
+wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/vx.0/MapleMono-NF-CN-unhinted.zip \
+&& wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/vx.x.0/FantasqueSansMono.zip \
+&& wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/vx.x.0/FiraMono.zip \
 && cd ~/.local/share/fonts \
-&& unzip MapleMonoNL-NF-CN-unhinted.zip \
 && unzip MapleMono-NF-CN-unhinted.zip \
 && unzip FantasqueSansMono.zip \
 && unzip FiraMono.zip \
-&& rm MapleMonoNL-NF-CN-unhinted.zip \
 && rm MapleMono-NF-CN-unhinted.zip \
 && rm FantasqueSansMono.zip \
 && rm FiraMono.zip \
