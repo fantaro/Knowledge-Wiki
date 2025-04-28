@@ -24,21 +24,37 @@ sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel git bat
 
 ### 安装 Edge 浏览器
 
-- 使用现有浏览器下载 Edge 浏览器
+[Edge官网](https://www.microsoft.com/ja-jp/edge)
+
+```shell
+sudo zypper addrepo -f --gpgcheck-allow-unsigned https://packages.microsoft.com/yumrepos/edge/ edge-yum
+sudo zypper refresh
+sudo zypper install microsoft-edge-stable
+```
 
 ### 安装 Brave 浏览器
+
+[Brave官网](https://brave.com/ja)
+
 ```shell
 curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
 - 进入 brave://flags 开启 Wayland 模式
 
-### 安装 Dropbox 并启动
+### 安装 Dropbox
 
 [Dropbox官网](https://www.dropbox.com)
 
 ```shell
 sudo zypper install dropbox dolphin-plugins
+```
+### 安装 Joplin
+
+[Joplin官网](https://joplinapp.org)
+
+```shell
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 ```
 
 ### 设置系统语言
@@ -59,7 +75,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak config --set languages "ja;zh"
 ```
 
-### 重启系统以确保配置生效
+#### ※重启系统
 
 ### 安装 kwin 插件：Kröhnkite
 
@@ -243,7 +259,7 @@ cat .bashrc
 ### 安装常用软件（Flatpak）
 
 ```shell
-sudo flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader io.anytype.anytype org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita net.agalwood.Motrix
+sudo flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita net.agalwood.Motrix
 
 flatpak install -y flathub com.xnview.XnViewMP
 flatpak install -y flathub md.obsidian.Obsidian
