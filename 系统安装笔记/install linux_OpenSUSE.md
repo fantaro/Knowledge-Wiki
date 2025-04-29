@@ -365,6 +365,13 @@ chmod +x install.sh
 ./install.sh
 ```
 
+- 设置 fcitx5 自启动
+
+```shell
+cat 'exec-once=fcitx5-remote -r' >> ~/.config/hypr/hyprland.conf
+cat 'exec-once=fcitx5 -d --replace' >> ~/.config/hypr/hyprland.conf
+```
+
 ### 配置 Docker
 
 ```shell
