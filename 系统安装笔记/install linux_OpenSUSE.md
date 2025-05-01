@@ -88,7 +88,7 @@ sudo zypper remove firefox ibus
 - 安装常用软件：
 
 ```shell
-sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship ghostty yt-dlp docker aria2 cowsay
+sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship ghostty yt-dlp docker aria2 cowsay showmethekey
 ```
 
 ### 下载我的 dotfiles
