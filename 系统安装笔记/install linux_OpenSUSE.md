@@ -77,10 +77,6 @@ flatpak config --set languages "ja;zh"
 
 #### ※重启系统
 
-### 安装 kwin 插件：Kröhnkite
-
-[Kröhnkite 插件说明](https://github.com/anametologin/krohnkite#readme)
-
 ### 安装／移除软件 (Packages)
 
 - 移除不需要的软件：
@@ -92,7 +88,7 @@ sudo zypper remove firefox ibus
 - 安装常用软件：
 
 ```shell
-sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship wezterm yt-dlp docker aria2 cowsay
+sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship ghostty yt-dlp docker aria2 cowsay
 ```
 
 ### 下载我的 dotfiles
@@ -223,10 +219,10 @@ echo 'export SUDO_EDITOR=/usr/bin/nvim' >> .zshrc
 cat .zshrc
 ```
 
-### 配置 WezTerm
+### 配置 Ghostty
 
 ```shell
-mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
+mv ~/Documents/dotfiles/dotconfig/ghostty ~/.config/
 ```
 
 ### 配置 fastfetch
@@ -300,6 +296,10 @@ Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-do
 ```shell
 GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192
 ```
+
+### 安装 kwin 插件：Kröhnkite
+
+[Kröhnkite 插件说明](https://github.com/anametologin/krohnkite#readme)
 
 ### 配置 Vim
 
@@ -384,10 +384,10 @@ sudo docker compose up
 sudo systemctl stop docker
 ```
 
-### 配置 Ghostty
+### 配置 WezTerm
 
 ```shell
-mv ~/Documents/dotfiles/dotconfig/ghostty ~/.config/
+mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
 ```
 
 ### 配置 Alacritty
