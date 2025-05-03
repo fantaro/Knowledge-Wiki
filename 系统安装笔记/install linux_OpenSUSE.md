@@ -88,7 +88,7 @@ sudo zypper remove firefox ibus
 - 安装常用软件：
 
 ```shell
-sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship ghostty yt-dlp docker aria2 cowsay showmethekey
+sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship ghostty yt-dlp docker aria2 showmethekey
 ```
 
 ### 下载我的 dotfiles
@@ -137,6 +137,16 @@ rustup default stable
 ```shell
 sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick chafa fd poppler-tools xclip ouch
 cargo install --locked yazi-fm yazi-cli
+```
+
+### 安装 Pokemon colorscripts
+
+```shell
+cd ~/Documents
+git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
+cd pokemon-colorscripts
+sudo ./install.sh
+pokemon-colorscripts
 ```
 
 ### 安装 VSCode
