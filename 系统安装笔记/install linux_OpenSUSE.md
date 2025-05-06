@@ -19,7 +19,7 @@ sudo zypper update
 
 ### 安装必要软件
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget just
 ```
 
 ### 安装 Edge 浏览器
@@ -139,14 +139,16 @@ sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick cha
 cargo install --locked yazi-fm yazi-cli
 ```
 
-### 安装 Pokemon colorscripts
+### 安装 pokego
 
 ```shell
-cd ~/Documents
-git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
-cd pokemon-colorscripts
-sudo ./install.sh
-pokemon-colorscripts
+cd ~/Downloads
+wget -P ~/Downloads https://github.com/rubiin/pokego/releases/download/vn.n.n/pokego-linux-n.n.n.tar.gz
+tar xvf pokego-linux-n.n.n.tar.gz
+mv ~/Downloads/pokego ~/.local/bin/
+pokego --help
+rm pokego-linux-n.n.n.tar.gz LICENSE
+rm -rf completions
 ```
 
 ### 安装 VSCode
