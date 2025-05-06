@@ -139,16 +139,16 @@ sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick cha
 cargo install --locked yazi-fm yazi-cli
 ```
 
-### 安装 pokego
+### 安装 pokemon-colorscripts
 
 ```shell
-cd ~/Downloads
-wget -P ~/Downloads https://github.com/rubiin/pokego/releases/download/vn.n.n/pokego-linux-n.n.n.tar.gz
-tar xvf pokego-linux-n.n.n.tar.gz
-mv ~/Downloads/pokego ~/.local/bin/
-pokego --help
-rm pokego-linux-n.n.n.tar.gz LICENSE
-rm -rf completions
+cd ~/Documents
+git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
+cd pokemon-colorscripts
+sudo ./install.sh
+pokemon-colorscripts
+cd ..
+rm -rf pokemon-colorscripts
 ```
 
 ### 安装 VSCode
