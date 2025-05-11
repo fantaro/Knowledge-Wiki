@@ -19,7 +19,7 @@ sudo zypper update
 
 ### 安装必要软件
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget just
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard
 ```
 
 ### 安装 Edge 浏览器
@@ -135,7 +135,7 @@ rustup default stable
 ### 安装 Yazi
 
 ```shell
-sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick chafa fd poppler-tools xclip ouch
+sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick chafa fd poppler-tools ouch
 cargo install --locked yazi-fm yazi-cli
 ```
 
