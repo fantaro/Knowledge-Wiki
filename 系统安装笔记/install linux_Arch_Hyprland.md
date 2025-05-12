@@ -75,7 +75,7 @@ cd paru
 makepkg -si
 paru dropbox ※Type 1
 
-cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+cat 'exec-once = dropbox' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```
 ### 安装 Joplin
 
@@ -236,8 +236,9 @@ cat .bashrc
 ### 安装常用软件（Flatpak）
 
 ```shell
-sudo flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita net.agalwood.Motrix
+flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita
 
+flatpak install -y flathub net.agalwood.Motrix
 flatpak install -y flathub com.xnview.XnViewMP
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub org.musescore.MuseScore
