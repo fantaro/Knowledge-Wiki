@@ -43,8 +43,8 @@ bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/se
 - 设置 fcitx5 自启动
 
 ```shell
-cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/hyprland.conf
-cat 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/hyprland.conf
+cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+cat 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```
 
 ### 安装 Edge 浏览器
@@ -74,6 +74,8 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 paru dropbox ※Type 1
+
+cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```
 ### 安装 Joplin
 
@@ -106,7 +108,6 @@ flatpak config --set languages "ja;zh"
 
 ```shell
 sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2
-
 paru showmethekey
 ```
 
@@ -117,33 +118,11 @@ cd ~/Documents
 git clone https://github.com/fantaro/dotfiles
 ```
 
-### 安装 Rust
-
-```shell
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-sudo pacman -S rustup
-cargo install cargo-update
-rustup update stable
-rustup default stable
-```
-
 ### 安装 Yazi
 
 ```shell
 sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
 paru -S resvg
-```
-
-### 安装 pokemon-colorscripts
-
-```shell
-cd ~/Documents
-git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
-cd pokemon-colorscripts
-sudo ./install.sh
-pokemon-colorscripts
-cd ..
-rm -rf pokemon-colorscripts
 ```
 
 ### 安装 VSCode
