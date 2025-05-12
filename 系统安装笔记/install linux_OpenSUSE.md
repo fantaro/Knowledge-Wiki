@@ -19,7 +19,7 @@ sudo zypper update
 
 ### 安装必要软件
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard xclip xsel
 ```
 
 ### 安装 Edge 浏览器
