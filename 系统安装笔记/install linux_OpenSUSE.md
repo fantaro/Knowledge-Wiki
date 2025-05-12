@@ -191,10 +191,10 @@ cd ~
 cat .zshrc
 echo >> .zshrc
 echo "alias ls='lsd'" >> .zshrc
-echo "alias ll='lsd -l'" >> .zshrc
-echo "alias la='lsd -a'" >> .zshrc
-echo "alias lla='lsd -la'" >> .zshrc
-echo "alias lt='lsd --tree'" >> .zshrc
+echo "alias ll='ls -l'" >> .zshrc
+echo "alias la='ls -a'" >> .zshrc
+echo "alias lla='ls -la'" >> .zshrc
+echo "alias lt='ls --tree'" >> .zshrc
 cat .zshrc
 ```
 
