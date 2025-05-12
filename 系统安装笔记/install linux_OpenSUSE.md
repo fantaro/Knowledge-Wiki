@@ -265,8 +265,9 @@ cat .bashrc
 ### 安装常用软件（Flatpak）
 
 ```shell
-sudo flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita net.agalwood.Motrix
+flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita
 
+flatpak install -y flathub net.agalwood.Motrix
 flatpak install -y flathub com.xnview.XnViewMP
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub org.musescore.MuseScore
