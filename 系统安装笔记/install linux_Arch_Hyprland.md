@@ -9,7 +9,9 @@
 
 ```shell
 sudo pacman -Syu
-sudo pacman -SC
+sudo pacman -Sc
+paru -Syu
+paru -Sc
 ```
 
 ### 安装必要软件
@@ -121,7 +123,7 @@ git clone https://github.com/fantaro/dotfiles
 ### 安装 Yazi
 
 ```shell
-sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
+sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp
 paru -S resvg
 ```
 
