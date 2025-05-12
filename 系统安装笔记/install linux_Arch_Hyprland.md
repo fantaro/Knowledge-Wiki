@@ -14,15 +14,15 @@ sudo pacman -SC
 
 ### 安装必要软件
 ```shell
-sudo pacman -S gcc gcc-c++ make git bat lsd curl wget wl-clipboard
+sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel
 ```
 
 ### 配置 Hyprland (预配置)
 
 - KooL's
 ```shell
-git clone --depth=1 https://github.com/JaKooLit/OpenSuse-Hyprland.git ~/OpenSuse-Hyprland
-cd ~/OpenSuse-Hyprland
+git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
+cd ~/Arch-Hyprland
 chmod +x install.sh
 ./install.sh
 ```
@@ -43,8 +43,8 @@ bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/se
 - 设置 fcitx5 自启动
 
 ```shell
-cat 'exec-once=fcitx5-remote -r' >> ~/.config/hypr/hyprland.conf
-cat 'exec-once=fcitx5 -d --replace' >> ~/.config/hypr/hyprland.conf
+cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/hyprland.conf
+cat 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/hyprland.conf
 ```
 
 ### 安装 Edge 浏览器
@@ -52,7 +52,7 @@ cat 'exec-once=fcitx5 -d --replace' >> ~/.config/hypr/hyprland.conf
 [Edge官网](https://www.microsoft.com/ja-jp/edge)
 
 ```shell
-sudo pacman -S microsoft-edge-stable-bin
+paru -S microsoft-edge-stable-bin
 ```
 
 ### 安装 Brave 浏览器
@@ -105,7 +105,7 @@ flatpak config --set languages "ja;zh"
 - 安装常用软件：
 
 ```shell
-sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags  ghostty yt-dlp docker aria2
+sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2
 
 paru showmethekey
 ```
