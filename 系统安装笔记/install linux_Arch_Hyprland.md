@@ -14,7 +14,7 @@ sudo pacman -SC
 
 ### 安装必要软件
 ```shell
-sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel
+sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel fuse2
 ```
 
 ### 配置 Hyprland (预配置)
