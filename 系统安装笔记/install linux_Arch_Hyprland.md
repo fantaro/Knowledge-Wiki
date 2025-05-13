@@ -44,13 +44,6 @@ cd ~/HyDE/Scripts
 bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-arch.sh)
 ```
 
-- 设置 fcitx5 自启动
-
-```shell
-cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
-cat 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
-```
-
 ### 安装 Edge 浏览器
 
 [Edge官网](https://www.microsoft.com/ja-jp/edge)
@@ -93,6 +86,13 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 
 ```shell
 sudo pacman -S fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-chinese-addons noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+```
+
+- 设置 fcitx5 自启动
+
+```shell
+cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+cat 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```
 
 ### 启用 Flatpak
