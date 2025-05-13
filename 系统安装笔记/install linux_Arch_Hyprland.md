@@ -1,6 +1,7 @@
 # Arch 安装笔记
 
 ### 系统概要
+
 - OS：Arch linux
 - WM：Hyprland
 - Shell：zsh
@@ -15,6 +16,7 @@ paru -Sc
 ```
 
 ### 安装必要软件
+
 ```shell
 sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel fuse2
 ```
@@ -29,7 +31,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-- HyDE
+- HyDE（备用）
 ```shell
 pacman -S --needed base-devel
 git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
@@ -37,7 +39,7 @@ cd ~/HyDE/Scripts
 ./install.sh
 ```
 
-- ML4W
+- ML4W（备用）
 ```shell
 bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-arch.sh)
 ```
@@ -86,8 +88,6 @@ cat 'exec-once = dropbox' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```shell
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 ```
-
-### 设置系统语言
 
 ### 安装中日文输入法
 
@@ -157,20 +157,6 @@ mv ~/Documents/dotfiles/dotconfig/btop ~/.config/
 mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 ```
 
-- 更新 shell 配置
-
-```shell
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo "alias ls='lsd'" >> .zshrc
-echo "alias ll='ls -l'" >> .zshrc
-echo "alias la='ls -a'" >> .zshrc
-echo "alias lla='ls -la'" >> .zshrc
-echo "alias lt='ls --tree'" >> .zshrc
-cat .zshrc
-```
-
 ### 配置 NeoVim (LazyVim)
 
 ```shell
@@ -191,19 +177,6 @@ mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
 nvim
 ```
 
-- 更新 shell 配置
-
-```shell
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo 'alias vi=vim' >> .zshrc
-echo 'alias vim=nvim' >> .zshrc
-echo 'export EDITOR=/usr/bin/nvim' >> .zshrc
-echo 'export SUDO_EDITOR=/usr/bin/nvim' >> .zshrc
-cat .zshrc
-```
-
 ### 配置 Ghostty
 
 ```shell
@@ -221,18 +194,6 @@ mv ~/Documents/dotfiles/dotconfig/fastfetch/config.jsonc ~/.config/fastfetch/con
 ```shell
 mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
 ya pack -u
-```
-
-- 更新 shell 配置
-
-```shell
-cd ~
-cat .bashrc
-echo >> .bashrc
-echo 'if command -v starship &> /dev/null; then' >> .bashrc
-echo '  eval "$(starship init bash)"' >> .bashrc
-echo 'fi' >> .bashrc
-cat .bashrc
 ```
 
 ### 安装常用软件（Flatpak）
