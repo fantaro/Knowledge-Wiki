@@ -382,7 +382,7 @@ conda clean --packages
 ```shell
 sudo bash ./VMware-Workstation-Full-xxxx.x86_64.bundle
 # System service scripts directory: /etc/systemd/system
-sudo pacman -S kernel-default-devel
+sudo pacman -S linux-headers
 ```
 
 ### 手动卸载 VMware Workstation
