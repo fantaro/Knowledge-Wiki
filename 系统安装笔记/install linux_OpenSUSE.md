@@ -187,11 +187,12 @@ mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 - 别名
 
 ```alias
-alias ls='lsd'"
+alias ls=lsd
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+alias lta='ls -a --tree'
 ```
 
 ### 配置 NeoVim (LazyVim)
@@ -219,6 +220,10 @@ nvim
 ```alias
 alias vi=vim
 alias vim=nvim
+```
+
+- 设置为主编辑器
+```shell
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
 ```
@@ -303,15 +308,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 mv ~/Documents/dotfiles/.vimrc ~/
 ```
 
-- 更新 shell 配置
+- 别名
 
+```alias
+alias vi=vim
+```
+
+- 设置为主编辑器
 ```shell
-cat .zshrc
-echo >> .zshrc
-echo 'alias vi=vim' >> .zshrc
-echo 'export EDITOR=/usr/bin/vim' >> .zshrc
-echo 'export SUDO_EDITOR=/usr/bin/vim' >> .zshrc
-cat .zshrc
+export EDITOR=/usr/bin/vim
+export SUDO_EDITOR=/usr/bin/vim
 ```
 
 - 启动 Vim 后运行命令安装插件
