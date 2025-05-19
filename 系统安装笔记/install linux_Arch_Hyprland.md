@@ -160,6 +160,17 @@ mv ~/Documents/dotfiles/dotconfig/btop ~/.config/
 mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 ```
 
+- 别名
+
+```alias
+alias ls=lsd
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias lta='ls -a --tree'
+```
+
 ### 配置 NeoVim (LazyVim)
 
 ```shell
@@ -178,6 +189,19 @@ mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua
 mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
 
 nvim
+```
+
+- 别名
+
+```alias
+alias vi=vim
+alias vim=nvim
+```
+
+- 设置为主编辑器
+```shell
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
 ```
 
 ### 配置 Ghostty
@@ -260,15 +284,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 mv ~/Documents/dotfiles/.vimrc ~/
 ```
 
-- 更新 shell 配置
+- 别名
 
+```alias
+alias vi=vim
+```
+
+- 设置为主编辑器
 ```shell
-cat .zshrc
-echo >> .zshrc
-echo 'alias vi=vim' >> .zshrc
-echo 'export EDITOR=/usr/bin/vim' >> .zshrc
-echo 'export SUDO_EDITOR=/usr/bin/vim' >> .zshrc
-cat .zshrc
+export EDITOR=/usr/bin/vim
+export SUDO_EDITOR=/usr/bin/vim
 ```
 
 - 启动 Vim 后运行命令安装插件
@@ -289,21 +314,17 @@ mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
 ```
 
-- 更新 shell 配置
+- 别名
 
-```shell
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo "alias ls='eza --icons'" >> .zshrc
-echo "alias ll='eza -l --icons'" >> .zshrc
-echo "alias la='eza -a --icons'" >> .zshrc
-echo "alias lla='eza -al --icons'" >> .zshrc
-echo "alias lt='eza --tree --icons'" >> .zshrc
-echo "alias lta='eza -a --tree --icons'" >> .zshrc
-echo "alias lt1='eza --tree --level=1 --icons'" >> .zshrc
-echo "alias lta1='eza --tree --level=1 --icons'" >> .zshrc
-cat .zshrc
+```alias
+alias ls='eza --icons'
+alias ll='eza -l --icons'
+alias la='eza -a --icons'
+alias lla='eza -al --icons'
+alias lt='eza --tree --icons'
+alias lta='eza -a --tree --icons'
+alias lt1='eza --tree --level=1 --icons'
+alias lta1='eza --tree --level=1 --icons'
 ```
 
 ### 配置 Docker
