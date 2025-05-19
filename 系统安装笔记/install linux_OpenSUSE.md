@@ -184,18 +184,14 @@ mv ~/Documents/dotfiles/dotconfig/btop ~/.config/
 mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
 ```
 
-- 更新 shell 配置
+- 别名
 
-```shell
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo "alias ls='lsd'" >> .zshrc
-echo "alias ll='ls -l'" >> .zshrc
-echo "alias la='ls -a'" >> .zshrc
-echo "alias lla='ls -la'" >> .zshrc
-echo "alias lt='ls --tree'" >> .zshrc
-cat .zshrc
+```alias
+alias ls='lsd'"
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 ```
 
 ### 配置 NeoVim (LazyVim)
@@ -218,17 +214,13 @@ mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
 nvim
 ```
 
-- 更新 shell 配置
+- 别名
 
-```shell
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo 'alias vi=vim' >> .zshrc
-echo 'alias vim=nvim' >> .zshrc
-echo 'export EDITOR=/usr/bin/nvim' >> .zshrc
-echo 'export SUDO_EDITOR=/usr/bin/nvim' >> .zshrc
-cat .zshrc
+```alias
+alias vi=vim
+alias vim=nvim
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
 ```
 
 ### 配置 Ghostty
@@ -248,18 +240,6 @@ mv ~/Documents/dotfiles/dotconfig/fastfetch/config.jsonc ~/.config/fastfetch/con
 ```shell
 mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
 ya pack -u
-```
-
-- 更新 shell 配置
-
-```shell
-cd ~
-cat .bashrc
-echo >> .bashrc
-echo 'if command -v starship &> /dev/null; then' >> .bashrc
-echo '  eval "$(starship init bash)"' >> .bashrc
-echo 'fi' >> .bashrc
-cat .bashrc
 ```
 
 ### 安装常用软件（Flatpak）
@@ -346,27 +326,35 @@ cat .zshrc
 mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
+- 更新 shell 配置
+
+```shell
+cd ~
+cat .bashrc
+echo >> .bashrc
+echo 'if command -v starship &> /dev/null; then' >> .bashrc
+echo '  eval "$(starship init bash)"' >> .bashrc
+echo 'fi' >> .bashrc
+cat .bashrc
+```
+
 ### 配置 eza
 
 ```shell
 mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
 ```
 
-- 更新 shell 配置
+- 别名
 
-```shell
-cd ~
-cat .zshrc
-echo >> .zshrc
-echo "alias ls='eza --icons'" >> .zshrc
-echo "alias ll='eza -l --icons'" >> .zshrc
-echo "alias la='eza -a --icons'" >> .zshrc
-echo "alias lla='eza -al --icons'" >> .zshrc
-echo "alias lt='eza --tree --icons'" >> .zshrc
-echo "alias lta='eza -a --tree --icons'" >> .zshrc
-echo "alias lt1='eza --tree --level=1 --icons'" >> .zshrc
-echo "alias lta1='eza --tree --level=1 --icons'" >> .zshrc
-cat .zshrc
+```alias
+alias ls='eza --icons'
+alias ll='eza -l --icons'
+alias la='eza -a --icons'
+alias lla='eza -al --icons'
+alias lt='eza --tree --icons'
+alias lta='eza -a --tree --icons'
+alias lt1='eza --tree --level=1 --icons'
+alias lta1='eza --tree --level=1 --icons'
 ```
 
 ### 配置 Hyprland (预配置)
