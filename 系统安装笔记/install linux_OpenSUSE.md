@@ -13,11 +13,13 @@
 
 ```shell
 sudo zypper dup
+sudo zypper clean
 ```
 或者
 ```shell
 sudo zypper refresh
 sudo zypper update
+sudo zypper clean
 ```
 
 ### 安装必要软件
@@ -125,6 +127,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 mv ~/Documents/dotfiles/.zshrc ~/
 ```
 
+- 更新 Oh My Zsh
+```shell
+omz update
+```
+
 ### 安装 Rust
 
 ```shell
@@ -135,11 +142,22 @@ rustup update stable
 rustup default stable
 ```
 
+- 更新 Rust 本身和已安装软件
+```shell
+rustup update
+cargo install-update -a
+```
+
 ### 安装 Yazi
 
 ```shell
 sudo zypper install ueberzugpp ffmpeg 7zip jq ripgrep fzf zoxide ImageMagick chafa fd poppler-tools ouch
 cargo install --locked yazi-fm yazi-cli
+```
+
+- 更新插件
+```shell
+ya pack -u
 ```
 
 ### 安装 pokemon-colorscripts
@@ -253,17 +271,15 @@ ya pack -u
 ### 安装常用软件（Flatpak）
 
 ```shell
-flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita
-
-flatpak install -y flathub net.agalwood.Motrix
-flatpak install -y flathub com.xnview.XnViewMP
-flatpak install -y flathub md.obsidian.Obsidian
-flatpak install -y flathub org.musescore.MuseScore
-flatpak install -y flathub net.ankiweb.Anki
-flatpak install -y flathub us.zoom.Zoom
+flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop
 ```
 
-### 如果 flatpak 安装后出现乱码
+- 更新 Flatpak 软件
+```shell
+sudo flatpak update
+```
+
+### 如果 Flatpak 软件安装后出现乱码
 
 ```shell
 flatpak run --command=fc-cache {AppName} -f -v
