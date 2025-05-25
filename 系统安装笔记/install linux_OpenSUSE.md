@@ -279,8 +279,7 @@ flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio c
 sudo flatpak update
 ```
 
-### 如果 Flatpak 软件安装后出现乱码
-
+- 如果 Flatpak 软件安装后出现乱码
 ```shell
 flatpak run --command=fc-cache {AppName} -f -v
 ```
