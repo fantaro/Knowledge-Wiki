@@ -463,6 +463,20 @@ pip3 install pip-review
 sudo zypper install libfuse2
 ```
 
+### 安装 微信
+
+下载 WeChat-AppImage 版的 X86 AppImage
+
+[Linux版微信官网](https://linux.weixin.qq.com/)
+
+```shell
+chmod u+x WeChatLinux_x86_64.AppImage
+./WeChatLinux_x86_64.AppImage --appimage-extract
+cd squashfs-root/opt/wechat/
+sudo execstack -c ./*.so
+./AppRun
+```
+
 ### 安装 Anaconda
 
 ```shell
