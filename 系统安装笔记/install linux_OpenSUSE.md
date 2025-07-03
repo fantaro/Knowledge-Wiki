@@ -157,7 +157,7 @@ cargo install --locked yazi-fm yazi-cli
 
 - 更新插件
 ```shell
-ya pack -u
+ya pkg upgrade
 ```
 
 ### 安装 pokemon-colorscripts
