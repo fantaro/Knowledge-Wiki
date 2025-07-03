@@ -28,10 +28,7 @@ sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel kwalletman
 
 - KooL's
 ```shell
-git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
-cd ~/Arch-Hyprland
-chmod +x install.sh
-./install.sh
+sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Hyprland-Dots/main/Distro-Hyprland.sh)
 ```
 
 - HyDE（备用）
