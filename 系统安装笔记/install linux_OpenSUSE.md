@@ -265,7 +265,7 @@ mv ~/Documents/dotfiles/dotconfig/fastfetch/config.jsonc ~/.config/fastfetch/con
 
 ```shell
 mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
-ya pack -u
+ya pkg upgrade
 ```
 
 ### 安装常用软件（Flatpak）
