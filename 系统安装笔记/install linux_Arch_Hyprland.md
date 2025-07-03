@@ -18,6 +18,10 @@ paru -Syu
 paru -Sc
 ```
 
+### Pacman 命令说明
+[软件包管理器命令对应关系](https://wiki.archlinux.org/title/Pacman/Rosetta)
+
+---
 ### 安装必要软件
 
 ```shell
