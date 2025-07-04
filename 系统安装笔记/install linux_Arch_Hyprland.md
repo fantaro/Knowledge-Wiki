@@ -25,7 +25,7 @@ paru -Sc
 ### 安装必要软件
 
 ```shell
-sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel kwalletmanager
+sudo pacman -S gcc make git bat lsd curl wget wl-clipboard xclip xsel kwalletmanager fuse2
 ```
 
 ### 配置 Hyprland (预配置)
@@ -56,6 +56,12 @@ bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/se
 paru -S microsoft-edge-stable-bin
 ```
 
+- 进入 edge://flags 开启 Wayland 模式
+
+```shell
+echo '--ozone-platform-hint=wayland' > ~/.config/microsoft-edge-stable-flags.conf
+```
+
 ### 安装 Brave 浏览器
 
 [Brave官网](https://brave.com/ja)
@@ -76,7 +82,7 @@ cd paru
 makepkg -si
 paru dropbox ※Type 1
 
-cat 'exec-once = dropbox' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+echo 'exec-once = dropbox' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```
 ### 安装 Joplin
 
@@ -95,8 +101,8 @@ sudo pacman -S fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-
 - 设置 fcitx5 自启动
 
 ```shell
-cat 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
-cat 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+echo 'exec-once = fcitx5-remote -r' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+echo 'exec-once = fcitx5 -d --replace' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```
 
 ### 启用 Flatpak
