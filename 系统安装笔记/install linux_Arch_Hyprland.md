@@ -269,6 +269,16 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 
 Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
 
+### 安装打印机
+
+```shell
+sudo pacman -S cups cups-pdf sane-airscan simple-scan
+sudo systemctl start cups.service
+sudo systemctl enable cups.service
+```
+
+- 访问 http://localhost:631 添加打印机
+
 ---
 ## 以下为可选或参考内容
 
