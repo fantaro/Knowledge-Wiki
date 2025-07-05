@@ -311,11 +311,11 @@ Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-do
 
 ### 配置 SDDM
 
-- 添加以下设置到 /etc/sddm.conf.d/kde_settings.conf 的 [General] 下
+- 添加以下设置到 /etc/sddm.conf.d/kde_settings.conf
 
 ```shell
-sudo echo '[General]' >> /etc/sddm.conf.d/kde_settings.conf
-sudo echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf.d/kde_settings.conf
+# echo '[General]' >> /etc/sddm.conf.d/kde_settings.conf
+# echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf.d/kde_settings.conf
 ```
 
 ### 安装 kwin 插件：Kröhnkite
