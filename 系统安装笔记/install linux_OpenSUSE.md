@@ -304,7 +304,8 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 && fc-cache -fv
 ```
 
-Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
+- Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
+- Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
 
 ---
 ## 以下为可选或参考内容
@@ -321,6 +322,12 @@ Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-do
 ### 安装 kwin 插件：Kröhnkite
 
 [Kröhnkite 插件说明](https://github.com/anametologin/krohnkite#readme)
+
+- 导入自定义快捷键
+  
+  - KDEシステム設定　➡　キーボード　➡　ショートカット　➡　Import...
+  - ~/Documents/dotfiles/dotconfig/KDE_Keymaps.kksrc
+
 
 ### 配置 Vim
 
