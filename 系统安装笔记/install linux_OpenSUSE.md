@@ -185,6 +185,12 @@ sudo zypper refresh
 sudo zypper install code
 ```
 
+### 安装 Virtualbox
+
+```shell
+sudo zypper install virtualbox virtualbox-guest-tools
+```
+
 ### 配置 tmux
 
 ```shell
