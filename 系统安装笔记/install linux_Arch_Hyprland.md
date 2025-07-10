@@ -267,7 +267,8 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 && fc-cache -fv
 ```
 
-Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
+- MapleMono 下载地址：[MapleMono Downloads](https://github.com/subframe7536/maple-font)
+- Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
 
 ### 安装打印机
 
@@ -284,10 +285,11 @@ sudo systemctl enable cups.service
 
 ### 配置 SDDM
 
-- 添加以下设置到 /etc/sddm.conf.d/kde_settings.conf 的 [General] 下
+- 添加以下设置到 /etc/sddm.conf.d/kde_settings.conf
 
 ```shell
-GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192
+# echo '[General]' >> /etc/sddm.conf.d/kde_settings.conf
+# echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf.d/kde_settings.conf
 ```
 
 ### 配置 Vim
@@ -320,12 +322,14 @@ export SUDO_EDITOR=/usr/bin/vim
 ### 配置 starship
 
 ```shell
+sudo pacman -S starship
 mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
 ### 配置 eza
 
 ```shell
+sudo pacman -S eza
 mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
 ```
 
@@ -357,12 +361,14 @@ sudo systemctl stop docker
 ### 配置 WezTerm
 
 ```shell
+sudo pacman -S wezterm
 mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
 ```
 
 ### 配置 Alacritty
 
 ```shell
+sudo pacman -S alacritty
 mv ~/Documents/dotfiles/dotconfig/alacritty ~/.config/
 ```
 
@@ -383,13 +389,8 @@ pip3 install --upgrade pip
 ```shell
 mkdir ~/.config/pip
 vi ~/.config/pip/pip.conf
-```
-
-在 `pip.conf` 中写入内容：
-
-```ini
-[global]
-break-system-packages = true
+echo '[global]' >> ~/.config/pip/pip.conf
+echo 'break-system-packages = true' >> ~/.config/pip/pip.conf
 ```
 
 - 安装需要的库：
