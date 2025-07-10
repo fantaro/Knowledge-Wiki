@@ -304,7 +304,7 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 && fc-cache -fv
 ```
 
-- Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
+- MapleMono 下载地址：[MapleMono Downloads](https://github.com/subframe7536/maple-font)
 - Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
 
 ---
