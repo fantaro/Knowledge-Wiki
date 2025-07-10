@@ -73,7 +73,7 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 ### 安装中日文输入法
 
 ```shell
-sudo zypper install fcitx5 fcitx5-configtool fcitx5-mozc fcitx5-chinese-addons
+sudo zypper install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-configtool-kcm6 fcitx5-gtk3 fcitx5-gtk4 fcitx5-mozc fcitx5-qt5 fcitx5-qt6 fcitx5-table-extra fcitx5-table-other
 ```
 
 ### 启用 Flatpak
@@ -91,13 +91,13 @@ flatpak config --set languages "ja;zh"
 - 移除不需要的软件：
 
 ```shell
-sudo zypper remove firefox ibus
+sudo zypper remove -u firefox ibus
 ```
 
 - 安装常用软件：
 
 ```shell
-sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags starship ghostty yt-dlp docker aria2 showmethekey
+sudo zypper install fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2
 ```
 
 ### 下载我的 dotfiles
@@ -359,6 +359,7 @@ export SUDO_EDITOR=/usr/bin/vim
 ### 配置 starship
 
 ```shell
+sudo zypper install starship
 mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
@@ -377,6 +378,7 @@ cat .bashrc
 ### 配置 eza
 
 ```shell
+sudo zypper install eza
 mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
 ```
 
@@ -391,22 +393,6 @@ alias lt='eza --tree --icons'
 alias lta='eza -a --tree --icons'
 alias lt1='eza --tree --level=1 --icons'
 alias lta1='eza --tree --level=1 --icons'
-```
-
-### 配置 Hyprland (预配置)
-
-```shell
-git clone --depth=1 https://github.com/JaKooLit/OpenSuse-Hyprland.git ~/OpenSuse-Hyprland
-cd ~/OpenSuse-Hyprland
-chmod +x install.sh
-./install.sh
-```
-
-- 设置 fcitx5 自启动
-
-```shell
-cat 'exec-once=fcitx5-remote -r' >> ~/.config/hypr/hyprland.conf
-cat 'exec-once=fcitx5 -d --replace' >> ~/.config/hypr/hyprland.conf
 ```
 
 ### 配置 Docker
@@ -424,12 +410,14 @@ sudo systemctl stop docker
 ### 配置 WezTerm
 
 ```shell
+sudo zypper install wezterm
 mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
 ```
 
 ### 配置 Alacritty
 
 ```shell
+sudo zypper install alacritty
 mv ~/Documents/dotfiles/dotconfig/alacritty ~/.config/
 ```
 
@@ -450,13 +438,8 @@ pip3 install --upgrade pip
 ```shell
 mkdir ~/.config/pip
 vi ~/.config/pip/pip.conf
-```
-
-在 `pip.conf` 中写入内容：
-
-```ini
-[global]
-break-system-packages = true
+echo '[global]' >> ~/.config/pip/pip.conf
+echo 'break-system-packages = true' >> ~/.config/pip/pip.conf
 ```
 
 - 安装需要的库：
