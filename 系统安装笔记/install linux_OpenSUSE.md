@@ -28,7 +28,7 @@ sudo zypper clean
 ---
 ### 安装必要软件
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard xclip xsel
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard xclip xsel libfuse2
 ```
 
 ### 安装 Edge 浏览器
@@ -161,6 +161,7 @@ cargo install --locked yazi-fm yazi-cli
 
 - 更新插件
 ```shell
+mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
 ya pkg upgrade
 ```
 
@@ -183,6 +184,39 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo zypper addrepo -f https://packages.microsoft.com/yumrepos/vscode vscode
 sudo zypper refresh
 sudo zypper install code
+```
+
+### 安装 NeoVim (LazyVim)
+
+```shell
+sudo zypper in neovim lazygit neovide
+
+mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
+mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
+
+mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
+
+nvim
+```
+
+- 别名
+
+```alias
+alias vi=vim
+alias vim=nvim
+```
+
+- 设置为主编辑器
+```shell
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
 ```
 
 ### 安装 Virtualbox
@@ -226,39 +260,6 @@ alias lt='ls --tree'
 alias lta='ls -a --tree'
 ```
 
-### 配置 NeoVim (LazyVim)
-
-```shell
-sudo zypper in neovim lazygit neovide
-
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-
-mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
-mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
-
-mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
-
-nvim
-```
-
-- 别名
-
-```alias
-alias vi=vim
-alias vim=nvim
-```
-
-- 设置为主编辑器
-```shell
-export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=/usr/bin/nvim
-```
-
 ### 配置 Ghostty
 
 ```shell
@@ -269,13 +270,6 @@ mv ~/Documents/dotfiles/dotconfig/ghostty ~/.config/
 
 ```shell
 mv ~/Documents/dotfiles/dotconfig/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
-```
-
-### 配置 Yazi
-
-```shell
-mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
-ya pkg upgrade
 ```
 
 ### 安装常用软件（Flatpak）
@@ -335,7 +329,7 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
   - ~/Documents/dotfiles/dotconfig/KDE_Keymaps.kksrc
 
 
-### 配置 Vim
+### 安装 Vim
 
 ```shell
 sudo zypper install vim gvim
@@ -362,7 +356,7 @@ export SUDO_EDITOR=/usr/bin/vim
 :PlugInstall
 ```
 
-### 配置 starship
+### 安装 starship
 
 ```shell
 sudo zypper install starship
@@ -381,7 +375,7 @@ echo 'fi' >> .bashrc
 cat .bashrc
 ```
 
-### 配置 eza
+### 安装 eza
 
 ```shell
 sudo zypper install eza
@@ -413,14 +407,14 @@ sudo docker compose up
 sudo systemctl stop docker
 ```
 
-### 配置 WezTerm
+### 安装 WezTerm
 
 ```shell
 sudo zypper install wezterm
 mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
 ```
 
-### 配置 Alacritty
+### 安装 Alacritty
 
 ```shell
 sudo zypper install alacritty
@@ -456,12 +450,6 @@ pip3 install Jupyter
 pip3 install jupyterlab
 pip3 install pip-review
 ~/.local/bin/pip-review --auto --continue-on-fail
-```
-
-### 启用 AppImage
-
-```shell
-sudo zypper install libfuse2
 ```
 
 ### 安装 微信
