@@ -336,6 +336,8 @@ sudo zypper install vim gvim
 mkdir -p ~/.vim/autoload/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mv ~/Documents/dotfiles/.vimrc ~/
+vim
+:PlugInstall
 ```
 
 - 别名
@@ -348,12 +350,6 @@ alias vi=vim
 ```shell
 export EDITOR=/usr/bin/vim
 export SUDO_EDITOR=/usr/bin/vim
-```
-
-- 启动 Vim 后运行命令安装插件
-
-```vim
-:PlugInstall
 ```
 
 ### 安装 starship
