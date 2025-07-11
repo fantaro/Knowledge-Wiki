@@ -139,6 +139,7 @@ paru -S resvg
 
 - 更新插件
 ```shell
+mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
 ya pkg upgrade
 ```
 
@@ -146,6 +147,39 @@ ya pkg upgrade
 
 ```shell
 paru -S visual-studio-code-bin
+```
+
+### 安装 NeoVim (LazyVim)
+
+```shell
+sudo pacman -S neovim lazygit neovide
+
+mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
+mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
+
+mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
+
+nvim
+```
+
+- 别名
+
+```alias
+alias vi=vim
+alias vim=nvim
+```
+
+- 设置为主编辑器
+```shell
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
 ```
 
 ### 配置 tmux
@@ -183,39 +217,6 @@ alias lt='ls --tree'
 alias lta='ls -a --tree'
 ```
 
-### 配置 NeoVim (LazyVim)
-
-```shell
-sudo pacman -S neovim lazygit neovide
-
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-
-mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
-mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
-
-mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
-
-nvim
-```
-
-- 别名
-
-```alias
-alias vi=vim
-alias vim=nvim
-```
-
-- 设置为主编辑器
-```shell
-export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=/usr/bin/nvim
-```
-
 ### 配置 Ghostty
 
 ```shell
@@ -226,13 +227,6 @@ mv ~/Documents/dotfiles/dotconfig/ghostty ~/.config/
 
 ```shell
 mv ~/Documents/dotfiles/dotconfig/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
-```
-
-### 配置 Yazi
-
-```shell
-mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
-ya pkg upgrade
 ```
 
 ### 安装常用软件（Flatpak）
@@ -292,13 +286,15 @@ sudo systemctl enable cups.service
 # echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf.d/kde_settings.conf
 ```
 
-### 配置 Vim
+### 安装 Vim
 
 ```shell
 sudo pacman -S vim gvim
 mkdir -p ~/.vim/autoload/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mv ~/Documents/dotfiles/.vimrc ~/
+vim
+:PlugInstall
 ```
 
 - 别名
@@ -313,20 +309,14 @@ export EDITOR=/usr/bin/vim
 export SUDO_EDITOR=/usr/bin/vim
 ```
 
-- 启动 Vim 后运行命令安装插件
-
-```vim
-:PlugInstall
-```
-
-### 配置 starship
+### 安装 starship
 
 ```shell
 sudo pacman -S starship
 mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
 ```
 
-### 配置 eza
+### 安装 eza
 
 ```shell
 sudo pacman -S eza
@@ -358,14 +348,14 @@ sudo docker compose up
 sudo systemctl stop docker
 ```
 
-### 配置 WezTerm
+### 安装 WezTerm
 
 ```shell
 sudo pacman -S wezterm
 mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
 ```
 
-### 配置 Alacritty
+### 安装 Alacritty
 
 ```shell
 sudo pacman -S alacritty
@@ -401,12 +391,6 @@ pip3 install Jupyter
 pip3 install jupyterlab
 pip3 install pip-review
 ~/.local/bin/pip-review --auto --continue-on-fail
-```
-
-### 启用 AppImage
-
-```shell
-sudo pacman -S fuse2
 ```
 
 ### 安装 Anaconda
