@@ -7,7 +7,7 @@
 - Shell：zsh
 
 ### 系统截图
-![MyArchLinux.png](https://github.com/fantaro/KnowledgeBase/blob/master/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/MyArchLinux.png)
+![MyArchLinux.png](https://github.com/fantaro/Knowledge-Wiki/blob/master/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/MyArchLinux.png)
 
 ### 系统更新
 
