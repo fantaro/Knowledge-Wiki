@@ -28,7 +28,7 @@ sudo zypper clean
 ---
 ### 安装必要软件
 ```shell
-sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard xclip xsel libfuse2
+sudo zypper install gcc gcc-c++ make libopenssl-3-devel libopenssl-devel libappindicator3-1 git bat lsd curl wget wl-clipboard xclip xsel libfuse2 fetchmsttfonts
 ```
 
 ### 安装 Edge 浏览器
