@@ -325,7 +325,7 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 
 - 导入自定义快捷键
   
-  - KDEシステム設定　➡　キーボード　➡　ショートカット　➡　Import...
+  - System Settings　➡　keyboard　➡　Shortcuts　➡　Import...
   - ~/Documents/dotfiles/dotconfig/KDE_Keymaps.kksrc
 
 
