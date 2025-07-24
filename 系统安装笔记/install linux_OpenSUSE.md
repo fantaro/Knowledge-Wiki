@@ -161,7 +161,7 @@ cargo install --locked yazi-fm yazi-cli
 
 - 更新插件
 ```shell
-mv ~/Documents/dotfiles/dotconfig/yazi ~/.config/
+mv ~/Documents/dotfiles/.config/yazi ~/.config/
 ya pkg upgrade
 ```
 
@@ -198,10 +198,10 @@ mv ~/.cache/nvim{,.bak}
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
-mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
-mv ~/Documents/dotfiles/dotconfig/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
+mv ~/Documents/dotfiles/.config/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
+mv ~/Documents/dotfiles/.config/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
 
-mv ~/Documents/dotfiles/dotconfig/neovide ~/.config/
+mv ~/Documents/dotfiles/.config/neovide ~/.config/
 
 nvim
 ```
@@ -240,13 +240,13 @@ mv ~/Documents/dotfiles/.aria2 ~/
 ### 配置 btop
 
 ```shell
-mv ~/Documents/dotfiles/dotconfig/btop ~/.config/
+mv ~/Documents/dotfiles/.config/btop ~/.config/
 ```
 
 ### 配置 lsd
 
 ```shell
-mv ~/Documents/dotfiles/dotconfig/lsd ~/.config/
+mv ~/Documents/dotfiles/.config/lsd ~/.config/
 ```
 
 - 别名
@@ -263,13 +263,13 @@ alias lta='ls -a --tree'
 ### 配置 Ghostty
 
 ```shell
-mv ~/Documents/dotfiles/dotconfig/ghostty ~/.config/
+mv ~/Documents/dotfiles/.config/ghostty ~/.config/
 ```
 
 ### 配置 fastfetch
 
 ```shell
-mv ~/Documents/dotfiles/dotconfig/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+mv ~/Documents/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 ```
 
 ### 安装常用软件（Flatpak）
@@ -326,7 +326,7 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 - 导入自定义快捷键
   
   - System Settings　➡　keyboard　➡　Shortcuts　➡　Import...
-  - ~/Documents/dotfiles/dotconfig/KDE_Keymaps.kksrc
+  - ~/Documents/dotfiles/.config/KDE_Keymaps.kksrc
 
 
 ### 安装 Vim
@@ -356,7 +356,7 @@ export SUDO_EDITOR=/usr/bin/vim
 
 ```shell
 sudo zypper install starship
-mv ~/Documents/dotfiles/dotconfig/starship.toml ~/.config/
+mv ~/Documents/dotfiles/.config/starship.toml ~/.config/
 ```
 
 - 更新 shell 配置
@@ -375,7 +375,7 @@ cat .bashrc
 
 ```shell
 sudo zypper install eza
-mv ~/Documents/dotfiles/dotconfig/eza ~/.config/
+mv ~/Documents/dotfiles/.config/eza ~/.config/
 ```
 
 - 别名
@@ -407,14 +407,14 @@ sudo systemctl stop docker
 
 ```shell
 sudo zypper install wezterm
-mv ~/Documents/dotfiles/dotconfig/wezterm ~/.config/
+mv ~/Documents/dotfiles/.config/wezterm ~/.config/
 ```
 
 ### 安装 Alacritty
 
 ```shell
 sudo zypper install alacritty
-mv ~/Documents/dotfiles/dotconfig/alacritty ~/.config/
+mv ~/Documents/dotfiles/.config/alacritty ~/.config/
 ```
 
 ### 安装 python3
