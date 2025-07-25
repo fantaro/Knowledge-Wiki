@@ -71,6 +71,10 @@ curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
 - 进入 brave://flags 开启 Wayland 模式
+- 启动时初期化 kwallet
+```shell
+echo 'exec-once = /usr/lib/pam_kwallet_init >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+```  
 
 ### 安装 Dropbox
 
