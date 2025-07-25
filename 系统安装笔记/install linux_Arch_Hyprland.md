@@ -56,7 +56,7 @@ bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/se
 paru -S microsoft-edge-stable-bin
 ```
 
-- 进入 edge://flags 开启 Wayland 模式
+- 开启 Wayland 模式
 
 ```shell
 echo '--ozone-platform-hint=wayland' > ~/.config/microsoft-edge-stable-flags.conf
@@ -72,6 +72,7 @@ curl -fsS https://dl.brave.com/install.sh | sh
 
 - 进入 brave://flags 开启 Wayland 模式
 - 启动时初期化 kwallet
+
 ```shell
 echo 'exec-once = /usr/lib/pam_kwallet_init >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```  
