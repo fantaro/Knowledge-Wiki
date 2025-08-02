@@ -100,7 +100,7 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 ### 安装中日文输入法
 
 ```shell
-sudo pacman -S fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-chinese-addons noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+sudo pacman -S fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-chinese-addons fcitx5-pinyin-zhwiki noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
 
 - 设置 fcitx5 自启动
