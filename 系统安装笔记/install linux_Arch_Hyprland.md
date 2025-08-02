@@ -406,6 +406,13 @@ conda upgrade --all
 conda clean --packages
 ```
 
+### 安装 Virtralbox
+
+```shell
+sudo pacman -S virtualbox virtualbox-guest-iso
+※Select virtualbox-host-modules-arch
+```
+
 ### 安装 VMware Workstation
 
 ```shell
