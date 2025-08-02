@@ -284,11 +284,11 @@ sudo systemctl enable cups.service
 
 ### 配置 SDDM
 
-- 添加以下设置到 /etc/sddm.conf.d/kde_settings.conf
+- 添加以下设置到 /etc/sddm.conf
 
 ```shell
-# echo '[General]' >> /etc/sddm.conf.d/kde_settings.conf
-# echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf.d/kde_settings.conf
+# echo '[General]' >> /etc/sddm.conf
+# echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf
 ```
 
 ### 安装 Vim
@@ -411,6 +411,20 @@ conda clean --packages
 ```shell
 sudo pacman -S virtualbox virtualbox-guest-iso
 ※Select virtualbox-host-modules-arch
+sudo usermod -aG vboxusers $USER
+```
+
+- 查看版本号
+```shell
+vboxmanage -v | cut -dr -f1
+```
+
+- 下载并安装扩展包(vbox-extpack)
+[downloads page](https://download.virtualbox.org/virtualbox/)
+
+```shell
+sudo vboxmanage extpack install Oracle_VirtualBox_Extension_Pack-x.x.xx.vbox-extpack
+vboxmanage list extpacks
 ```
 
 ### 安装 VMware Workstation
