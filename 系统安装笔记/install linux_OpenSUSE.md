@@ -223,6 +223,20 @@ export SUDO_EDITOR=/usr/bin/nvim
 
 ```shell
 sudo zypper install virtualbox virtualbox-guest-tools
+sudo usermod -aG vboxusers $USER
+```
+
+- 查看版本号
+```shell
+vboxmanage -v | cut -dr -f1
+```
+
+- 下载并安装扩展包(vbox-extpack)
+[downloads page](https://download.virtualbox.org/virtualbox/)
+
+```shell
+sudo vboxmanage extpack install Oracle_VirtualBox_Extension_Pack-x.x.xx.vbox-extpack
+vboxmanage list extpacks
 ```
 
 ### 配置 tmux
