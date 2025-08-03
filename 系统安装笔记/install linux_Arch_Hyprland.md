@@ -317,7 +317,7 @@ sudo systemctl enable cups.service
 ```shell
 sudo echo '[archlinuxcn]' >> /etc/pacman.conf
 sudo echo 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
-
+sudo pacman -Sy
 sudo pacman -S archlinuxcn-keyring
 ```
 
