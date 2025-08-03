@@ -400,7 +400,7 @@ mv ~/Documents/dotfiles/.config/alacritty ~/.config/
 ### 安装 python3
 
 ```shell
-sudo pacman -S python3 python3-pip
+sudo pacman -S python python-pip
 ```
 
 ### 升级 Python 库
