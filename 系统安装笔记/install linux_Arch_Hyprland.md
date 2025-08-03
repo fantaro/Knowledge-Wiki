@@ -312,6 +312,15 @@ sudo systemctl enable cups.service
 # echo 'GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1.5,QT_FONT_DPI=192' >> /etc/sddm.conf
 ```
 
+### 导入 Arch Linux 中文社区仓库
+
+```shell
+sudo echo '[archlinuxcn]' >> /etc/pacman.conf
+sudo echo 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
+
+sudo pacman -S archlinuxcn-keyring
+```
+
 ### 安装 Vim
 
 ```shell
