@@ -289,6 +289,11 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 
 - MapleMono 下载地址：[MapleMono Downloads](https://github.com/subframe7536/maple-font)
 - Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
+- 安装微软字体
+
+```shell
+paru -S ttf-ms-win11-auto
+```
 
 ### 安装打印机
 
