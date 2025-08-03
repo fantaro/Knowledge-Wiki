@@ -187,6 +187,27 @@ export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
 ```
 
+### 安装 Virtralbox
+
+```shell
+sudo pacman -S virtualbox virtualbox-guest-iso
+※Select virtualbox-host-modules-arch
+sudo usermod -aG vboxusers $USER
+```
+
+- 查看版本号
+```shell
+vboxmanage -v | cut -dr -f1
+```
+
+- 下载并安装扩展包(vbox-extpack)
+[downloads page](https://download.virtualbox.org/virtualbox/)
+
+```shell
+sudo vboxmanage extpack install Oracle_VirtualBox_Extension_Pack-x.x.xx.vbox-extpack
+vboxmanage list extpacks
+```
+
 ### 配置 tmux
 
 ```shell
@@ -404,27 +425,6 @@ pip3 install pip-review
 bash Anaconda3-yyyy.mm-Linux-x86_64.sh
 conda upgrade --all
 conda clean --packages
-```
-
-### 安装 Virtralbox
-
-```shell
-sudo pacman -S virtualbox virtualbox-guest-iso
-※Select virtualbox-host-modules-arch
-sudo usermod -aG vboxusers $USER
-```
-
-- 查看版本号
-```shell
-vboxmanage -v | cut -dr -f1
-```
-
-- 下载并安装扩展包(vbox-extpack)
-[downloads page](https://download.virtualbox.org/virtualbox/)
-
-```shell
-sudo vboxmanage extpack install Oracle_VirtualBox_Extension_Pack-x.x.xx.vbox-extpack
-vboxmanage list extpacks
 ```
 
 ### 安装 VMware Workstation
