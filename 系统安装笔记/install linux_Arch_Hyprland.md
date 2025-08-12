@@ -329,7 +329,7 @@ sudo pacman -S archlinuxcn-keyring
 ### 安装 Vim
 
 ```shell
-sudo pacman -S vim gvim
+sudo pacman -S gvim
 mkdir -p ~/.vim/autoload/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mv ~/Documents/dotfiles/.vimrc ~/
