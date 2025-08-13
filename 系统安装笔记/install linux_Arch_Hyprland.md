@@ -28,7 +28,7 @@ paru -Sc
 sudo pacman -S man-db gcc make git bat lsd curl wget wl-clipboard xclip xsel kwalletmanager kwallet-pam fuse2
 ```
 
-### 配置 Hyprland (预配置)
+### 安装 Hyprland (预配置)
 
 - KooL's
 ```shell
@@ -46,6 +46,26 @@ cd ~/HyDE/Scripts
 - ML4W（备用）
 ```shell
 bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-arch.sh)
+```
+
+### 安装 AUR Helper
+
+[paru](https://github.com/morganamilo/paru)
+
+```shell
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
+[yay](https://github.com/Jguer/yay)
+
+```shell
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 ### 安装 Edge 浏览器
@@ -82,9 +102,6 @@ echo 'exec-once = /usr/lib/pam_kwallet_init >> ~/.config/hypr/UserConfigs/Startu
 [Dropbox官网](https://www.dropbox.com)
 
 ```shell
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
 paru dropbox ※Type 1
 
 echo 'exec-once = dropbox' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
