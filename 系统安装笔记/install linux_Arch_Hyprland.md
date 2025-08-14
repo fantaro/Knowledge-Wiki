@@ -155,8 +155,7 @@ git clone https://github.com/fantaro/dotfiles
 ### 安装 Yazi
 
 ```shell
-sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp
-paru -S resvg
+sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp resvg
 ```
 
 - 更新插件
