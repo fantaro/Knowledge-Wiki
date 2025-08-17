@@ -200,7 +200,7 @@ alias vim=nvim
 - 设置为主编辑器
 ```shell
 export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=$EDITOR
 ```
 
 ### 安装 Virtralbox
@@ -362,7 +362,7 @@ alias vi=vim
 - 设置为主编辑器
 ```shell
 export EDITOR=/usr/bin/vim
-export SUDO_EDITOR=/usr/bin/vim
+export SUDO_EDITOR=$EDITOR
 ```
 
 ### 安装 starship
