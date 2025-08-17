@@ -365,6 +365,13 @@ export EDITOR=/usr/bin/vim
 export SUDO_EDITOR=$EDITOR
 ```
 
+### 配置 nemo
+
+- 激活右键菜单：Open in Terminal
+```shell
+gsettings set org.cinnamon.desktop.default-applications.terminal exec ghostty
+```
+
 ### 安装 starship
 
 ```shell
