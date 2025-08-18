@@ -372,6 +372,11 @@ export SUDO_EDITOR=$EDITOR
 gsettings set org.cinnamon.desktop.default-applications.terminal exec ghostty
 ```
 
+- 添加文件比较功能
+```shell
+paru -S nemo-compare
+```
+
 ### 安装 starship
 
 ```shell
