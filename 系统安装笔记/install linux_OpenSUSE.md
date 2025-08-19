@@ -243,6 +243,7 @@ vboxmanage list extpacks
 
 ```shell
 mv ~/Documents/dotfiles/.tmux.conf ~/
+mv ~/Documents/dotfiles/.config/tmux ~/.config/
 ```
 
 ### 配置 aria2
