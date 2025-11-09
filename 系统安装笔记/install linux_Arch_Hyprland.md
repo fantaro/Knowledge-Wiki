@@ -95,7 +95,7 @@ curl -fsS https://dl.brave.com/install.sh | sh
 
 ```shell
 echo 'exec-once = /usr/lib/pam_kwallet_init' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
-```  
+```
 
 ### 安装 Dropbox
 
