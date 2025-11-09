@@ -25,7 +25,7 @@ paru -Sc
 ### 安装必要软件
 
 ```shell
-sudo pacman -S man-db gcc make git bat lsd curl wget wl-clipboard xclip xsel kwalletmanager kwallet-pam fuse2
+sudo pacman -S man-db gcc make git unzip bat lsd curl wget wl-clipboard xclip xsel kwalletmanager kwallet-pam fuse2
 ```
 
 ### 安装 Hyprland (预配置)
