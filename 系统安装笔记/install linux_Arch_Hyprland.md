@@ -94,7 +94,7 @@ curl -fsS https://dl.brave.com/install.sh | sh
 - 启动时初期化 kwallet
 
 ```shell
-echo 'exec-once = /usr/lib/pam_kwallet_init >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
+echo 'exec-once = /usr/lib/pam_kwallet_init' >> ~/.config/hypr/UserConfigs/Startup_Apps.conf
 ```  
 
 ### 安装 Dropbox
