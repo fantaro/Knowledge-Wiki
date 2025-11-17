@@ -170,6 +170,16 @@ ya pkg upgrade
 paru -S visual-studio-code-bin
 ```
 
+### 安装 Wps office
+
+```shell
+paru -S wps-office-cn
+paru -S ttf-wps-fonts
+paru -S ttf-ms-fonts
+paru -S wps-office-mime-cn
+paru -S wps-office-mui-zh-cn
+```
+
 ### 安装 NeoVim (LazyVim)
 
 ```shell
@@ -275,7 +285,7 @@ mv ~/Documents/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/confi
 ### 安装常用软件（Flatpak）
 
 ```shell
-flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita
+flatpak install -y flathub com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita
 ```
 
 - 更新 Flatpak 软件
@@ -306,11 +316,6 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 
 - MapleMono 下载地址：[MapleMono Downloads](https://github.com/subframe7536/maple-font)
 - Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
-- 安装微软字体
-
-```shell
-paru -S ttf-ms-win11-auto
-```
 
 ### 安装打印机
 
