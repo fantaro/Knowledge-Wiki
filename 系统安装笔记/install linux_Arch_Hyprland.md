@@ -178,6 +178,15 @@ paru -S ttf-wps-fonts
 paru -S ttf-ms-fonts
 paru -S wps-office-mime-cn
 paru -S wps-office-mui-zh-cn
+paru -S libtiff5
+```
+
+- 将界面切换为中文
+
+```shell
+echo '' >> ~/.config/Kingsoft/Office.conf
+echo '[General]' >> ~/.config/Kingsoft/Office.conf
+echo 'languages=zh_CN' >> ~/.config/Kingsoft/Office.conf
 ```
 
 ### 安装 NeoVim (LazyVim)
