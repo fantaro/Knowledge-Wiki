@@ -141,7 +141,7 @@ flatpak config --set languages "ja;zh"
 - 安装常用软件：
 
 ```shell
-sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2
+sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2 digikam
 paru showmethekey
 ```
 
