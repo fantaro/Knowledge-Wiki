@@ -329,9 +329,10 @@ wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases
 ### 安装打印机
 
 ```shell
-sudo pacman -S cups cups-pdf sane-airscan simple-scan
+sudo pacman -S cups cups-pdf sane-airscan simple-scan system-config-printer
 sudo systemctl start cups.service
 sudo systemctl enable cups.service
+sudo lpadmin -p AirPrint -E -v "ipp://192.168.1.52/ipp/print" -m everywhere
 ```
 
 - 访问 http://localhost:631 添加打印机
