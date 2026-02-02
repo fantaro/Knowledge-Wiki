@@ -141,7 +141,7 @@ flatpak config --set languages "ja;zh"
 - 安装常用软件：
 
 ```shell
-sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2 digikam
+sudo pacman -S fastfetch ncdu btop tmux remmina keepassxc strawberry audacity filezilla kdenlive universal-ctags ghostty yt-dlp docker aria2
 paru showmethekey
 ```
 
@@ -294,7 +294,7 @@ mv ~/Documents/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/confi
 ### 安装常用软件（Flatpak）
 
 ```shell
-flatpak install -y flathub com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita
+flatpak install -y flathub com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita com.xnview.XnViewMP
 ```
 
 - 更新 Flatpak 软件
