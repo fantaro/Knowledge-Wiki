@@ -290,7 +290,7 @@ mv ~/Documents/dotfiles/.config/fastfetch/config.jsonc ~/.config/fastfetch/confi
 ### 安装常用软件（Flatpak）
 
 ```shell
-flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio com.github.unrud.VideoDownloader org.localsend.localsend_app com.jgraph.drawio.desktop
+flatpak install -y flathub org.onlyoffice.desktopeditors com.obsproject.Studio io.github.aandrew_me.ytdn org.localsend.localsend_app com.jgraph.drawio.desktop
 ```
 
 - 更新 Flatpak 软件
