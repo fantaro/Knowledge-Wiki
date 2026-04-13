@@ -446,6 +446,14 @@ sudo pacman -S alacritty
 mv ~/Documents/dotfiles/.config/alacritty ~/.config/
 ```
 
+### 安装 Alacritty
+
+```shell
+sudo pacman -S fish pkgfile
+command -v fish | sudo tee -a /etc/shells
+chsh -s "$(command -v fish)"
+```
+
 ### 安装 python3
 
 ```shell
