@@ -396,14 +396,15 @@ mv ~/Documents/dotfiles/.config/eza ~/.config/
 - 别名
 
 ```alias
-alias ls='eza --icons'
-alias ll='eza -l --icons'
-alias la='eza -a --icons'
-alias lla='eza -al --icons'
-alias lt='eza --tree --icons'
-alias lta='eza -a --tree --icons'
-alias lt1='eza --tree --level=1 --icons'
-alias lta1='eza --tree --level=1 --icons'
+alias ls='eza --color=always --group-directories-first --icons=always'
+alias ll='eza -l --color=always --group-directories-first --icons=always'
+alias la='eza -a --color=always --group-directories-first --icons=always'
+alias lla='eza -al --color=always --group-directories-first --icons=always'
+alias lt='eza -T --color=always --group-directories-first --icons=always'
+alias lta='eza -aT --color=always --group-directories-first --icons=always'
+alias lt1='eza -T --color=always --group-directories-first --level=1 --icons=always'
+alias lta1='eza -aT --color=always --group-directories-first --level=1 --icons=always'
+alias l.="eza -a | grep -e '^\.'"
 ```
 
 ### 配置 Docker
