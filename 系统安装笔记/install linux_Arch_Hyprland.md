@@ -447,7 +447,7 @@ sudo pacman -S alacritty
 mv ~/Documents/dotfiles/.config/alacritty ~/.config/
 ```
 
-### 安装 Alacritty
+### 安装 Fish shell
 
 ```shell
 sudo pacman -S fish pkgfile
