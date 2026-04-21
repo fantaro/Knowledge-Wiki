@@ -306,19 +306,23 @@ flatpak run --command=fc-cache {AppName} -f -v
 ### 安装字体
 
 ```shell
-wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/vx.0/MapleMono-NF-CN-unhinted.zip \
+wget -P ~/.local/share/fonts https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono/releases/download/x.xxxx.xx/JetBrainsMapleMono-NF-XX-XX-XX.zip \
+&& wget -P ~/.local/share/fonts https://github.com/subframe7536/maple-font/releases/download/vx.0/MapleMono-NF-CN-unhinted.zip \
 && wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/vx.x.0/FantasqueSansMono.zip \
 && wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/vx.x.0/FiraMono.zip \
 && cd ~/.local/share/fonts \
+&& unzip JetBrainsMapleMono-NF-XX-XX-XX.zip \
 && unzip MapleMono-NF-CN-unhinted.zip \
 && unzip FantasqueSansMono.zip \
 && unzip FiraMono.zip \
+&& rm JetBrainsMapleMono-NF-XX-XX-XX.zip \
 && rm MapleMono-NF-CN-unhinted.zip \
 && rm FantasqueSansMono.zip \
 && rm FiraMono.zip \
-&& fc-cache -fv
+&& fc-cache -fvMapleMono-NF-CN-unhinted.zip
 ```
 
+- JetBrainsMapleMono 下载地址：[JetBrainsMapleMono Downloads](https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono)
 - MapleMono 下载地址：[MapleMono Downloads](https://github.com/subframe7536/maple-font)
 - Nerdfonts 下载地址：[Nerdfonts Downloads](https://www.nerdfonts.com/font-downloads)
 
