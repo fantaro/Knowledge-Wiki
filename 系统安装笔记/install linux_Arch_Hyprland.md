@@ -323,7 +323,7 @@ wget -P ~/.local/share/fonts https://github.com/SpaceTimee/Fusion-JetBrainsMaple
 && rm MapleMono-NF-CN-unhinted.zip \
 && rm FantasqueSansMono.zip \
 && rm FiraMono.zip \
-&& fc-cache -fvMapleMono-NF-CN-unhinted.zip
+&& fc-cache -fv
 ```
 
 - JetBrainsMapleMono 下载地址：[JetBrainsMapleMono Downloads](https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono)
