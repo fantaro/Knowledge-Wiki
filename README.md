@@ -6,3 +6,4 @@
 * ### [Vim紹介](https://github.com/fantaro/Knowledge-Wiki/wiki/Vim%E7%B4%B9%E4%BB%8B)
 * ### [OpenSUSE 安装笔记](https://github.com/fantaro/Knowledge-Wiki/blob/master/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/install%20linux_OpenSUSE.md)
 * ### [Arch with Hyprland 安装笔记](https://github.com/fantaro/Knowledge-Wiki/blob/master/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/install%20linux_Arch_Hyprland.md)
+* ### [快速部署自用 Arch linux](https://github.com/fantaro/Knowledge-Wiki/blob/master/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/install%20linux_Arch_KDE_quick.md)
