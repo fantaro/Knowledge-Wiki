@@ -50,6 +50,7 @@ flatpak config --set languages "ja;zh"
 ### 安装字体
 
 ```shell
+curl -sI https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono/releases/latest | grep -i '^location:'
 wget -P ~/.local/share/fonts https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono/releases/download/x.xxxx.xx/JetBrainsMapleMono-NF-XX-XX-XX.zip \
 && cd ~/.local/share/fonts \
 && unzip JetBrainsMapleMono-NF-XX-XX-XX.zip \
