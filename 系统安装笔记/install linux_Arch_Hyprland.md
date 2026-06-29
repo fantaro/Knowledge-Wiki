@@ -498,6 +498,50 @@ conda upgrade --all
 conda clean --packages
 ```
 
+### 安装 Ansible
+
+- 安装 pipx
+```shell
+sudo pacman -S python-pipx
+pipx ensurepath
+or
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
+
+- 安装 ansible
+```shell
+pipx install --include-deps ansible
+```
+
+- 安装 argcomplete
+```shell
+pipx inject --include-apps ansible argcomplete
+```
+
+- 配置 argcomplete(bash)
+```shell
+activate-global-python-argcomplete --user
+```
+
+- 配置 argcomplete(fish)
+```shell
+register-python-argcomplete --shell fish ansible > ~/.config/fish/completions/ansible.fish
+register-python-argcomplete --shell fish ansible-config > ~/.config/fish/completions/ansible-config.fish
+register-python-argcomplete --shell fish ansible-console > ~/.config/fish/completions/ansible-console.fish
+register-python-argcomplete --shell fish ansible-doc > ~/.config/fish/completions/ansible-doc.fish
+register-python-argcomplete --shell fish ansible-galaxy > ~/.config/fish/completions/ansible-galaxy.fish
+register-python-argcomplete --shell fish ansible-inventory > ~/.config/fish/completions/ansible-inventory.fish
+register-python-argcomplete --shell fish ansible-playbook > ~/.config/fish/completions/ansible-playbook.fish
+register-python-argcomplete --shell fish ansible-pull > ~/.config/fish/completions/ansible-pull.fish
+register-python-argcomplete --shell fish ansible-vault > ~/.config/fish/completions/ansible-vault.fish
+```
+
+- 升级 ansible
+```shell
+pipx upgrade --include-injected ansible
+```
+
 ### 安装 VMware Workstation
 
 ```shell
