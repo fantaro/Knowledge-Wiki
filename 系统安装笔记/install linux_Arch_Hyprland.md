@@ -514,12 +514,33 @@ python3 -m pipx ensurepath
 pipx install --include-deps ansible
 ```
 
+- 升级 ansible
+```shell
+pipx upgrade --include-injected ansible
+```
+
+#### 通过pip安装
+- 安装 ansible
+```shell
+python3 -m pip install --user ansible
+```
+
+- 升级 ansible
+```shell
+python3 -m pip install --upgrade --user ansible
+```
+
+- 安装 argcomplete
+```shell
+python3 -m pip install --user argcomplete
+```
+
 - 安装 argcomplete
 ```shell
 pipx inject --include-apps ansible argcomplete
 ```
 
-- 配置 argcomplete(bash)
+- 配置 argcomplete(bash or zsh)
 ```shell
 activate-global-python-argcomplete --user
 ```
@@ -535,22 +556,6 @@ register-python-argcomplete --shell fish ansible-inventory > ~/.config/fish/comp
 register-python-argcomplete --shell fish ansible-playbook > ~/.config/fish/completions/ansible-playbook.fish
 register-python-argcomplete --shell fish ansible-pull > ~/.config/fish/completions/ansible-pull.fish
 register-python-argcomplete --shell fish ansible-vault > ~/.config/fish/completions/ansible-vault.fish
-```
-
-- 升级 ansible
-```shell
-pipx upgrade --include-injected ansible
-```
-
-#### 通过pip安装
-- 安装 ansible
-```shell
-python3 -m pip install --user ansible
-```
-
-- 升级 ansible
-```shell
-python3 -m pip install --upgrade --user ansible
 ```
 
 ### 安装 VMware Workstation
