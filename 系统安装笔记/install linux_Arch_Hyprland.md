@@ -475,7 +475,6 @@ pip3 install --upgrade pip
 
 ```shell
 mkdir ~/.config/pip
-vi ~/.config/pip/pip.conf
 echo '[global]' >> ~/.config/pip/pip.conf
 echo 'break-system-packages = true' >> ~/.config/pip/pip.conf
 ```
@@ -500,6 +499,7 @@ conda clean --packages
 
 ### 安装 Ansible
 
+#### 通过pipx安装
 - 安装 pipx
 ```shell
 sudo pacman -S python-pipx
@@ -540,6 +540,17 @@ register-python-argcomplete --shell fish ansible-vault > ~/.config/fish/completi
 - 升级 ansible
 ```shell
 pipx upgrade --include-injected ansible
+```
+
+#### 通过pip安装
+- 安装 ansible
+```shell
+python3 -m pip install --user ansible
+```
+
+- 升级 ansible
+```shell
+python3 -m pip install --upgrade --user ansible
 ```
 
 ### 安装 VMware Workstation
