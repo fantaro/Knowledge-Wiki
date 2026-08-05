@@ -18,7 +18,7 @@ sudo pacman -Syu && sudo pacman -Sc --noconfirm && paru -Syu && paru -Sc --nocon
 ### 安装必要软件
 
 ```shell
-sudo pacman -S 7zip aria2 audacity bat btop chafa cherrytree curl eza fastfetch fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-mozc fcitx5-pinyin-zhwiki fcitx5-qt fd ffmpeg filezilla fish flatpak fuse2 fzf gcc ghostty git imagemagick jq kdenlive keepassxc lazygit linux-headers make man-db meld ncdu neovide neovim noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obs-studio pkgfile poppler remmina resvg ripgrep sane-airscan showmethekey skanpage starship strawberry ueberzugpp unzip wget wl-clipboard xclip xsel yazi zellij zoxide zed
+sudo pacman -S 7zip aria2 audacity bat btop chafa cherrytree curl eza fastfetch fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-mozc fcitx5-pinyin-zhwiki fcitx5-qt fd ffmpeg filezilla fish flatpak fuse2 fzf gcc ghostty git imagemagick jq kdenlive keepassxc lazygit linux-headers make man-db meld ncdu neovide neovim noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obs-studio pkgfile poppler remmina resvg ripgrep sane-airscan showmethekey skanpage starship fooyin ueberzugpp unzip wget wl-clipboard xclip xsel yazi zellij zoxide zed
 ```
 
 ### 安装 AUR Helper
