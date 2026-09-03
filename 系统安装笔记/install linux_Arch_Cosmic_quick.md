@@ -88,6 +88,7 @@ mkdir -p ~/.cache/zsh
 ### 安装常用软件（Flatpak）
 
 ```shell
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub io.github.aandrew_me.ytdn org.localsend.localsend_app com.jgraph.drawio.desktop org.kde.krita com.xnview.XnViewMP
 ```
 
