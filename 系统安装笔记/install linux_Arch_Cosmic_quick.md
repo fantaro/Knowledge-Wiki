@@ -18,7 +18,7 @@ sudo pacman -Syu && sudo pacman -Sc --noconfirm && paru -Syu && paru -Sc --nocon
 ### 安装必要软件
 
 ```shell
-sudo pacman -S gnome-keyring libxml2 libxml2-legacy 7zip aria2 audacity bat btop chafa cherrytree curl eza fastfetch fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-mozc fcitx5-pinyin-zhwiki fcitx5-qt fd ffmpeg filezilla zsh flatpak fuse2 fzf gcc ghostty git imagemagick jq kdenlive keepassxc lazygit linux-headers make man-db meld ncdu neovide neovim noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obs-studio pkgfile poppler remmina resvg ripgrep sane-airscan showmethekey skanpage starship fooyin ueberzugpp unzip wget wl-clipboard xclip xsel yazi zellij zoxide zed copyq mpv libreoffice-fresh libreoffice-fresh-ja dos2unix
+sudo pacman -S gnome-keyring libxml2 libxml2-legacy 7zip aria2 audacity bat btop chafa cherrytree curl eza fastfetch fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-mozc fcitx5-pinyin-zhwiki fcitx5-qt fd ffmpeg filezilla firefox zsh flatpak foot fuse2 fzf gcc git imagemagick jq kdenlive keepassxc lazygit linux-headers make man-db meld ncdu neovide neovim noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obs-studio pkgfile poppler remmina resvg ripgrep sane-airscan showmethekey skanpage starship fooyin ueberzugpp unzip wget wl-clipboard xclip xsel yazi zellij zoxide zed copyq mpv libreoffice-fresh libreoffice-fresh-ja dos2unix
 ```
 
 ### 安装 AUR Helper
@@ -126,10 +126,11 @@ mv ~/Documents/dotfiles/.config/btop ~/.config/
 mv ~/Documents/dotfiles/.config/environment.d ~/.config/
 mv ~/Documents/dotfiles/.config/eza ~/.config/
 mv ~/Documents/dotfiles/.config/fastfetch ~/.config/
-mv ~/Documents/dotfiles/.config/zsh ~/.config/
-mv ~/Documents/dotfiles/.config/ghostty ~/.config/
+mv ~/Documents/dotfiles/.config/firefox ~/.config/
+mv ~/Documents/dotfiles/.config/foot ~/.config/
 mv ~/Documents/dotfiles/.config/lazygit ~/.config/
 mv ~/Documents/dotfiles/.config/microsoft-edge-stable-flags.conf ~/.config/
+mv ~/Documents/dotfiles/.config/mpv ~/.config/
 mv ~/Documents/dotfiles/.config/neovide ~/.config/
 mv ~/Documents/dotfiles/.config/nvim/lua/config/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
 mv ~/Documents/dotfiles/.config/nvim/lua/config/options.lua ~/.config/nvim/lua/config/options.lua
@@ -139,5 +140,7 @@ mv ~/Documents/dotfiles/.config/yazi ~/.config/
 rm -rf ~/.config/yazi/flavors/*
 rm -rf ~/.config/yazi/plugins/*
 ya pkg upgrade
+mv ~/Documents/dotfiles/.config/zellij ~/.config/
 mv ~/Documents/dotfiles/.config/zed ~/.config/
+mv ~/Documents/dotfiles/.config/zsh ~/.config/
 ```
