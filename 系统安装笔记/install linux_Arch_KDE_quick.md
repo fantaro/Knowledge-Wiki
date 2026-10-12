@@ -36,8 +36,8 @@ makepkg -si
 
 ```shell
 paru -S microsoft-edge-stable-bin
-paru -S motrix-next-bin
-paru dropbox
+paru -S photocraft-bin
+paru -S dropbox
 ※Type 1
 ```
 
